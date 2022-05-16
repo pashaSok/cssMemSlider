@@ -6,7 +6,7 @@ body{
     text-align: center;
 }
 .slider-wrapper{
-    width: 700px;
+    width: 60vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -16,16 +16,17 @@ body{
 .slide-line{
     display: flex;
     position: relative;
-    width: 700px;
+    width: 60vw;
     left: 0;
     transition:  0.5s;
 }
 .slide-wrapper{
-    width: 700px;
+    width: 60vw;
 }
 .slide-wrapper img{
     margin: 0 auto;
-    height: 400px;
+    width: 60vw;
+    height: 70vh;
     border-radius: 10px;
     box-shadow: 0px 5px 1px black;
 }
@@ -36,7 +37,7 @@ body{
 .under-slider{
     display: flex;
     align-items: center;
-    width: 700px;
+    width: 60vw;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -45,20 +46,20 @@ body{
     position: relative;
     left:0;
     transition: 0.5s;
-    width: 700px;
+    width: 60vw;
     height: 30px;
 }
 .under-slider .under-slide-line .slide-wrapper{
     display: flex;
     align-items: center;
-    width: 700px;
+    width: 60vw;
     height: 30px;
 }
 .under-slider .under-slide-line .slide-wrapper span{
     position: relative;
     z-index: 1;
     display: inline-block;
-    width: 700px;
+    width: 60vw;
     overflow: hidden;
     color: #fff;
     text-align: left;

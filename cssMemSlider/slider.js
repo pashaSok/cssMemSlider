@@ -27,9 +27,9 @@ const activeSlide=(index)=>{
 
 dots.forEach((dot,index)=>{
     dot.addEventListener('click',()=>{
-        position = 700 *index;
-        underSliderSlideLine.style.left=-position+'px';
-        sliderLine.style.left=-position+'px';
+        position = 60 *index;
+        underSliderSlideLine.style.left=-position+'vw';
+        sliderLine.style.left=-position+'vw';
         activeSlide(index);
     })
 });
