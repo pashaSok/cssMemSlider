@@ -5,7 +5,6 @@ body{
     padding: 50px;
 }
 #slider{
-    position: relative;
     text-align: center;
     margin: 0 auto;
 }
@@ -18,7 +17,9 @@ body{
 }
 #slides .image{
     width: 1000%;
-    margin-bottom: 430px;
+    height: 400px;
+    margin-bottom: 30px;
+    line-height: 0;
 }
 #slides .footer .comment{
     width: 1000%;
@@ -179,4 +180,57 @@ article img{
 }
 #slides .comment{
     transition: 0.5s ease-in-out;
+}
+.footer{
+    width: 100%;
+}
+@media screen and (max-width:800px){
+    #slides .image{
+        height: 30vh;
+        margin-bottom: 0px;
+    }
+    .footer{
+        display: flex;
+        height: 30vh;
+        flex-direction: column-reverse;
+    }
+    .dots{
+        transform: translate(0);
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width:440px){
+    .dots{
+        width: 150px;
+        height: 15px;
+    }
+    .dot-wrapper{
+        width: 15px;
+        height: 15px;
+    }
+    .dot-wrapper label{
+        width: 5px;
+        height: 5px;
+    }
+    #slides .image{
+        height: 30vh;
+        margin-bottom: 0px;
+    }
+    #slides span{
+        font-size: 14px;
+    }
+    .footer{
+        display: flex;
+        height: 20vh;
+        flex-direction: column-reverse;
+    }
+    .dots{
+        transform: translate(0);
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width:396px){
+    #slides span{
+        font-size: 10px;
+    }
 }
