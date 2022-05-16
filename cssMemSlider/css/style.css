@@ -1,0 +1,253 @@
+body{
+    background:#22272e;
+}
+.container{
+    padding: 50px;
+}
+#slider{
+    text-align: center;
+    margin: 0 auto;
+}
+.container input{
+    display: none;
+}
+#slides article{
+    width: 10%;
+    float: left;
+}
+#slides .image{
+    width: 1000%;
+    height: 400px;
+    margin-bottom: 30px;
+    line-height: 0;
+}
+#slides .footer .comment{
+    width: 1000%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+#overflow{
+    width: 100%;
+    overflow: hidden;
+
+}
+article img{
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0px 5px 1px black;
+}
+.footer .comment article span{
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    height: 20px;
+    width: 100%;
+    text-align: left;
+    color: #ffffff;
+}
+#desktop:checked ~ #slider{
+    max-width: 700px;
+}
+#switch1:checked ~ #slides .image{
+    margin-left: 0;
+}
+#switch1:checked ~ #slides .footer .comment{
+    margin-left: 0;
+}
+#switch2:checked ~ #slides .image{
+    margin-left: -100%;
+}
+#switch2:checked ~ #slides .footer .comment{
+    margin-left: -100%;
+}
+#switch3:checked ~ #slides .image{
+    margin-left: -200%;
+}
+#switch3:checked ~ #slides .footer .comment{
+    margin-left: -200%;
+}
+#switch4:checked ~ #slides .image{
+    margin-left: -300%;
+}
+#switch4:checked ~ #slides .footer .comment{
+    margin-left: -300%;
+}
+#switch5:checked ~ #slides .image{
+    margin-left: -400%;
+}
+#switch5:checked ~ #slides .footer .comment{
+    margin-left: -400%;
+}
+#switch6:checked ~ #slides .image{
+    margin-left: -500%;
+}
+#switch6:checked ~ #slides .footer .comment{
+    margin-left: -500%;
+}
+#switch7:checked ~ #slides .image{
+    margin-left: -600%;
+}
+#switch7:checked ~ #slides .footer .comment{
+    margin-left: -600%;
+}
+#switch8:checked ~ #slides .image{
+    margin-left: -700%;
+}
+#switch8:checked ~ #slides .footer .comment{
+    margin-left: -700%;
+}
+#switch9:checked ~ #slides .image{
+    margin-left: -800%;
+}
+#switch9:checked ~ #slides .footer .comment{
+    margin-left: -800%;
+}
+
+.dots{
+    background-color: #22272e;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    width: 240px;
+    transform: translate(460px, -30px);
+}
+.dot-wrapper label{
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.dot-wrapper{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dot-wrapper:hover{
+    cursor: pointer;
+}
+.dot-wrapper:hover label{
+    cursor: pointer !important;
+    background-color: rgb(0, 0, 0) !important;
+    transition: 0.5s;
+}
+.dot-wrapper label{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(100, 100, 250);
+    border: 2px solid rgb(100, 100, 250);
+}
+
+
+#switch1:checked~#slides #overflow .footer .dots .dot-wrapper:nth-child(1) label,
+#switch2:checked~#slides #overflow .footer .dots .dot-wrapper:nth-child(2) label,
+#switch3:checked~#slides #overflow .footer .dots .dot-wrapper:nth-child(3) label,
+#switch4:checked~#slides #overflow .footer .dots .dot-wrapper:nth-child(4) label,
+#switch5:checked~#slides #overflow .footer .dots .dot-wrapper:nth-child(5) label,
+#switch6:checked~#slides #overflow .footer .dots .dot-wrapper:nth-child(6) label,
+#switch7:checked~#slides #overflow .footer .dots .dot-wrapper:nth-child(7) label,
+#switch8:checked~#slides #overflow .footer .dots .dot-wrapper:nth-child(8) label,
+#switch9:checked~#slides #overflow .footer .dots .dot-wrapper:nth-child(9) label{
+    border: 2px solid rgb(100, 100, 250);
+    border-radius: 50%;
+    background-color: #22272e;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.dots .dot-wrapper:nth-child(1):active label,
+.dots .dot-wrapper:nth-child(2):active label,
+.dots .dot-wrapper:nth-child(3):active label,
+.dots .dot-wrapper:nth-child(4):active label,
+.dots .dot-wrapper:nth-child(5):active label,
+.dots .dot-wrapper:nth-child(6):active label,
+.dots .dot-wrapper:nth-child(7):active label,
+.dots .dot-wrapper:nth-child(8):active label,
+.dots .dot-wrapper:nth-child(9):active label{
+    border: 2px solid rgb(100, 100, 250);
+    border-radius: 50%;
+    background-color: #ffffff !important;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#slides .image{
+    transition: 0.5s ease-in-out;
+}
+#slides .comment{
+    transition: 0.5s ease-in-out;
+}
+.footer{
+    width: 100%;
+}
+@media screen and (max-width:800px){
+    #slides .image{
+        height: 300px;
+        margin-bottom: 0px;
+    }
+    .footer{
+        display: flex;
+        margin: 10px 0gi;
+        flex-direction: column-reverse;
+    }
+    .dots{
+        height: 50px;
+        transform: translate(0);
+        background: none;
+        margin: 10px auto;
+    }
+}
+@media screen and (max-width:580px){
+    #slides .image{
+        height: 200px;
+        margin-bottom: 0px;
+    }
+}
+@media screen and (max-width:440px){
+    .dots{
+        width: 150px;
+        height: 15px;
+    }
+    #slides .image{
+        margin-bottom: 0px;
+    }
+    .dot-wrapper{
+        width: 15px;
+        height: 15px;
+    }
+    .dot-wrapper label{
+        width: 5px;
+        height: 5px;
+    }
+    #slides span{
+        font-size: 14px;
+    }
+    .footer{
+        display: flex;
+        height: 1vh;
+        flex-direction: column-reverse;
+    }
+    .dots{
+        transform: translate(0);
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width:370px){
+    #slides .image{
+        height: 190px;
+        margin-bottom: 0px;
+    }
+    #slides span{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width:350px){
+    #slides .image{
+        height: 170px;
+        margin-bottom: 0px;
+    }
+}
